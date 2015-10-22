@@ -11,6 +11,7 @@ Bootstrap Admin Template by EGrappler.com
 body {
 	background: #f9f6f1;
 	font: 13px/1.7em 'Raleway';
+    padding-top: 65px;
 }
     
 p { 
@@ -41,7 +42,7 @@ textarea {
     font-size:100px;
 }
 
-#sign-in-form {
+.custom-form {
     border: 1px solid #c0c0c0;
     padding:20px;
 }

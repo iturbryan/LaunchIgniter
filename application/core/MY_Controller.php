@@ -16,9 +16,11 @@ class MY_Controller extends CI_Controller implements Commons
 
     const AT_apiKey = null;
 
-    const projectName = "LaunchIgniter";
+    const projectName = self::LAUNCH_IGNITER;
 
     const slogan = "Kickstart your projects";
+
+    const LAUNCH_IGNITER = 'LaunchIgniter';
 
     public function __construct()
     {
@@ -182,9 +184,29 @@ class MY_Controller extends CI_Controller implements Commons
 
     }
 
-    public function authorized()
+    public function login($username, $password, $role_id)
     {
         // TODO: Implement authorized() method.
+
+        $this->load_model('User');
+
+        $users = $this->User->login();
+
+        $login = false;
+
+        foreach($users->result() as $user)
+        {
+
+            $this->session->set_userdata(self::LAUNCH_IGNITER, array('username' => $user->username, 'role_id' => $user->role_id));
+
+            $login = true;
+
+            break;
+
+        }
+
+        return $login;
+
     }
 
     public function adminShowPage()

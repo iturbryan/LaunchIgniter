@@ -11,7 +11,7 @@
 <div class="container">
 
    <div class="col-md-4 col-md-offset-4">
-       <form id="sign-in-form" class="text-center">
+       <form id="sign-in-form" class="text-center custom-form">
            <i class="glyphicon glyphicon-user icon-lg"></i>
            <h2 class="form-signin-heading">Please sign in</h2>
            <div class="form-group">

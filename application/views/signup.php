@@ -11,7 +11,7 @@
 <div class="container">
 
    <div class="col-md-6 col-md-offset-3">
-       <form id="sign-in-form" class="text-center">
+       <form id="sign-in-form" class="text-center custom-form">
            <h2 class="form-signin-heading"><i class="glyphicon glyphicon-user"></i>&nbsp;Create Account</h2>
            <div class="form-group">
                <label for="name" class="sr-only">Name</label>

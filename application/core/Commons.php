@@ -23,7 +23,7 @@ interface Commons
 
     public function loadModel($model);
 
-    public function authorized();
+    public function login($username, $password, $role_id);
 
     public function adminShowPage();
 
