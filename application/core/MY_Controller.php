@@ -1,5 +1,6 @@
 <?php
 
+require_once 'Commons.php';
 /**
  * Created by PhpStorm.
  * User: bryanitur
@@ -15,10 +16,46 @@ class MY_Controller extends CI_Controller implements Commons
 
     const AT_apiKey = null;
 
+    const projectName = "LaunchIgniter";
+
+    const slogan = "Kickstart your projects";
+
     public function __construct()
     {
 
         parent::__construct();
+
+    }
+
+    public function createViewObject($view, $data = null)
+    {
+        // TODO: Implement createViewObject() method.
+
+        return json_decode(json_encode(array("view" => $view, "data" => $data)));
+
+    }
+
+    public function createIncludeObject($show, $data = null)
+    {
+        // TODO: Implement createIncludeObject() method.
+
+        $data['project'] = self::projectName;
+
+        $data['slogan'] = self::slogan;
+
+        return json_decode(json_encode(array("show" => $show, "data" => $data)));
+
+    }
+
+    public function ShowUserPage($header, $view, $footer)
+    {
+        // TODO: Implement userShowPage() method.
+
+        $this->load->view('includes/frontend/header', $header->data);
+
+        $this->load->view($view->view, $view->data);
+
+        $this->load->view('includes/frontend/footer', $footer->data);
 
     }
 

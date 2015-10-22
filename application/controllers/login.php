@@ -21,7 +21,13 @@ class Login extends MY_Controller
 
     {
 
-        $this->load->view('welcome_message');
+        $header = $this->createIncludeObject(true);
+
+        $view = $this->createViewObject('login');
+
+        $footer = $this->createIncludeObject(true);
+
+        $this->ShowUserPage($header, $view, $footer);
 
     }
 }

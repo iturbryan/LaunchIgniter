@@ -1,0 +1,47 @@
+/*------------------------------------------------------------------
+Bootstrap Admin Template by EGrappler.com
+------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------
+[1. Global]
+*/
+
+body {
+	background: #f9f6f1;
+	font: 13px/1.7em 'Raleway';
+}
+    
+p { 
+	font: 13px/1.7em 'Raleway'; 	
+}
+    
+input,
+button,
+select,
+textarea {
+  font-family: 'Raleway';
+}
+.navbar-inverse .navbar-brand {
+	color: #ffffff;
+    font-weight: 700;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #ffffff;
+}
+
+.navbar-inverse {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.icon-lg {
+    font-size:100px;
+}
+
+#sign-in-form {
+    border: 1px solid #c0c0c0;
+    padding:20px;
+}
