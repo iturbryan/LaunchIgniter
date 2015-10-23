@@ -11,7 +11,7 @@ class MY_Model extends CI_Model
 
     private $table;
 
-    function __construct($table){
+    function __construct($table = null){
 
         parent::__construct();
 
@@ -62,6 +62,16 @@ class MY_Model extends CI_Model
         $this->db->where('id', $id);
 
         $this->db->delete($this->table);
+
+    }
+
+    /* Custom data manipulation functions start here */
+
+    function encrypt($password)
+
+    {
+
+        return sha1($password);
 
     }
 }

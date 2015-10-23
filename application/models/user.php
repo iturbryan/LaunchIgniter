@@ -19,7 +19,7 @@ class User extends MY_Model
 
     function login($username, $password, $role_id){
 
-        $this->db->where(array('username' => $username, 'password' => $password, 'role_id' => $role_id));
+        $this->db->where(array('username' => $username, 'password' => $this->encrypt($password), 'role_id' => $role_id));
 
         return $this->db->get($this->table);
 

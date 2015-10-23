@@ -46,3 +46,15 @@ textarea {
     border: 1px solid #c0c0c0;
     padding:20px;
 }
+
+.form-message {
+    padding: 10px;
+}
+
+.error-message {
+    color: #aa0000;
+}
+.icon-small {
+    font-size:20px;
+    margin-top:5px;
+}

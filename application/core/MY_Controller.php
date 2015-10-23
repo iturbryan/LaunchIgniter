@@ -22,6 +22,8 @@ class MY_Controller extends CI_Controller implements Commons
 
     const LAUNCH_IGNITER = 'LaunchIgniter';
 
+    const DEFAULT_LANGUAGE = 'english';
+
     public function __construct()
     {
 
@@ -184,13 +186,29 @@ class MY_Controller extends CI_Controller implements Commons
 
     }
 
+    public function loadLang($filename)
+    {
+        // TODO: Implement loadLang() method.
+
+        $this->lang->load($filename, self::DEFAULT_LANGUAGE);
+
+    }
+
+    public function langLine($key)
+    {
+        // TODO: Implement langLine() method.
+
+        return $this->lang->line($key);
+
+    }
+
     public function login($username, $password, $role_id)
     {
         // TODO: Implement authorized() method.
 
-        $this->load_model('User');
+        $this->loadModel('User');
 
-        $users = $this->User->login();
+        $users = $this->User->login($username, $password, $role_id);
 
         $login = false;
 
@@ -209,9 +227,35 @@ class MY_Controller extends CI_Controller implements Commons
 
     }
 
+    public function signUp($name, $idNumber, $phoneNumber, $emailAddress, $password)
+    {
+        // TODO: Implement signUp() method.
+
+        $this->loadModel('Person');
+
+        $person_id = $this->Person->signUp($name, $idNumber, $phoneNumber, $emailAddress, $password);
+
+        return $person_id != null;
+
+    }
+
     public function adminShowPage()
     {
         // TODO: Implement adminShowPage() method.
+    }
+
+    public function response($status, $successMessage, $failureMessage)
+    {
+        // TODO: Implement response() method.
+
+        if($status)
+
+            return json_encode(array('success' => $status, 'message' => $successMessage));
+
+        else
+
+            return json_encode(array('success' => $status, 'message' => $failureMessage));
+
     }
 
     public function sendSMS($phone, $message)

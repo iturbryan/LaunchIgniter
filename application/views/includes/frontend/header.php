@@ -17,6 +17,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Raleway:400italic,600italic,400,600" rel="stylesheet">
@@ -25,6 +26,7 @@
 </head>
 
 <body>
+<input type="hidden" id="url" value="<?php echo base_url(); ?>" />
 <div class="container-fluid">
     <div class="navbar-wrapper">
 <nav class="navbar navbar-inverse navbar-fixed-top">

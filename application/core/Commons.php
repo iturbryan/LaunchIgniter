@@ -35,4 +35,12 @@ interface Commons
 
     public function createIncludeObject($show, $data);
 
+    public function response($status, $successMessage, $failureMessage);
+
+    public function loadLang($filename);
+
+    public function langLine($key);
+
+    public function signUp($name, $idNumber, $phoneNumber, $emailAddress, $password);
+
 }

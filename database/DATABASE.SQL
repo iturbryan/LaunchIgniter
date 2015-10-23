@@ -59,6 +59,37 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 INSERT INTO `tbl_users` (`id`, `username`, `password`, `role_id`, `active`) VALUES
 (1, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 0);
 
+
+CREATE TABLE IF NOT EXISTS `tbl_persons` (
+  `id` bigint(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `id_number` varchar(255) NOT NULL,
+  `phone_number` varchar(255) NOT NULL,
+  `email_address` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_persons`
+--
+ALTER TABLE `tbl_persons`
+ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id_number` (`id_number`), ADD UNIQUE KEY `email_address` (`email_address`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_persons`
+--
+ALTER TABLE `tbl_persons`
+MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
+
 --
 -- Indexes for dumped tables
 --

@@ -11,8 +11,12 @@
 <div class="container">
 
    <div class="col-md-6 col-md-offset-3">
-       <form id="sign-in-form" class="text-center custom-form">
+       <form id="sign-up-form" class="text-center custom-form">
            <h2 class="form-signin-heading"><i class="glyphicon glyphicon-user"></i>&nbsp;Create Account</h2>
+           <p>&nbsp;</p>
+           <div id="message-alert">
+
+           </div>
            <div class="form-group">
                <label for="name" class="sr-only">Name</label>
                <input type="text" name="name" class="form-control" placeholder="Your Name" />
@@ -37,7 +41,7 @@
                <label for="cpassword" class="sr-only">Confirm Password</label>
                <input type="password" name="cpassword" class="form-control" placeholder="Confirm Password" />
            </div>
-           <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
+           <button class="btn btn-primary btn-block" type="submit" id="sign-up-button">Sign Up</button>
        </form>
    </div>
 

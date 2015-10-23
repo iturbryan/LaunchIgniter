@@ -11,9 +11,12 @@
 <div class="container">
 
    <div class="col-md-4 col-md-offset-4">
-       <form id="sign-in-form" class="text-center custom-form">
-           <i class="glyphicon glyphicon-user icon-lg"></i>
-           <h2 class="form-signin-heading">Please sign in</h2>
+       <form id="login-form" class="text-center custom-form">
+           <i class="fa fa-user icon-lg"></i>
+           <h2 class="form-signin-heading">Please login</h2>
+           <div id="message-alert">
+
+           </div>
            <div class="form-group">
                <label for="username" class="sr-only">Username</label>
                <input type="text" name="username" class="form-control" placeholder="Username" />
@@ -22,7 +25,7 @@
                <label for="password" class="sr-only">Password</label>
                <input type="password" name="password" class="form-control" placeholder="Password" />
            </div>
-           <button class="btn btn-primary btn-block" type="submit">Sign In</button>
+           <button class="btn btn-primary btn-block" type="submit" id="login-submit">Sign In</button>
        </form>
    </div>
 
